@@ -98,7 +98,7 @@ function mailchimpSF_load_resources() {
 			// some javascript to get ajax version submitting to the proper location
 			global $wp_scripts;
 			$wp_scripts->localize('mailchimpSF_main_js', 'mailchimpSF', array(
-				'ajax_url' => trailingslashit(home_url()),
+                          'ajax_url' => trailingslashit(site_url()/*'http://blog.stacklead.com/' /*home_url()*/),
 			));
 		}
 	}
