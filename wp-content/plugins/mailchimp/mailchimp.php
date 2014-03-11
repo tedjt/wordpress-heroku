@@ -365,7 +365,7 @@ function mailchimpSF_authorize() {
 	if (strpos($proxy, 'socialize-this') !== false) {
 		$salt = mailchimpSF_auth_nonce_salt();
 		$id = wp_create_nonce(mailchimpSF_auth_nonce_key($salt));
-		$url = home_url('index.php');
+		$url = 'http://blog.stacklead.com/index.php'; // home_url('index.php');
 		$args = array(
 			'mcsf_action' => 'authorized',
 			'salt' => $salt,
@@ -815,13 +815,13 @@ if (!$user && MAILCHIMP_DEV_MODE == false) {
 			);
 			?>
 		</p>
-		
+
 		<div style="width: 900px;">
 			<table class="widefat mc-widefat mc-api">
 				<tr valign="top">
 					<th scope="row" class="mailchimp-connect"><?php esc_html_e('Connect to MailChimp', 'mailchimp_i18n'); ?></th>
 					<td>
-						<a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), home_url('index.php')) ?>" class="mailchimp-login">Connect</a>
+                                                <a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), 'http://blog.stacklead.com/index.php' /*home_url('index.php')*/ ) ?>" class="mailchimp-login">Connect</a>
 					</td>
 				</tr>
 			</table>
@@ -1018,14 +1018,14 @@ if (get_option('mc_list_id') == '' && MAILCHIMP_DEV_MODE == false) return;
 			<em><label for="mc_rewards"><?php esc_html_e('Turning this on will place a "powered by MailChimp" link in your form that will earn you credits with us. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
 		</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<th scope="row"><?php esc_html_e('Use Javascript Support?', 'mailchimp_i18n'); ?></th>
 		<td><input name="mc_use_javascript" type="checkbox" <?php checked(get_option('mc_use_javascript'), 'on'); ?> id="mc_use_javascript" class="code" />
 			<em><label for="mc_use_javascript"><?php esc_html_e('Turning this on will use fancy javascript submission and should degrade gracefully for users not using javascript. It is optional and can be turned on or off at any time.', 'mailchimp_i18n'); ?></label></em>
 		</td>
 	</tr>
-	
+
 	<tr valign="top">
 		<th scope="row"><?php esc_html_e('Use Javascript Datepicker?', 'mailchimp_i18n'); ?></th>
 		<td><input name="mc_use_datepicker" type="checkbox" <?php checked(get_option('mc_use_datepicker'), 'on'); ?> id="mc_use_datepicker" class="code" />
@@ -1058,7 +1058,7 @@ if (MAILCHIMP_DEV_MODE == false) { ?>
 
 				<?php
 				$mv = get_option('mc_merge_vars');
-				
+
 				if (count($mv) == 0 || !is_array($mv)){
 					?>
 					<em><?php esc_html_e('No Merge Variables found.', 'mailchimp_i18n'); ?></em>
