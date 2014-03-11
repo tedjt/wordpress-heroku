@@ -365,7 +365,7 @@ function mailchimpSF_authorize() {
 	if (strpos($proxy, 'socialize-this') !== false) {
 		$salt = mailchimpSF_auth_nonce_salt();
 		$id = wp_create_nonce(mailchimpSF_auth_nonce_key($salt));
-		$url = 'http://blog.stacklead.com/index.php'; // home_url('index.php');
+		$url = home_url('index.php');
 		$args = array(
 			'mcsf_action' => 'authorized',
 			'salt' => $salt,
@@ -821,7 +821,7 @@ if (!$user && MAILCHIMP_DEV_MODE == false) {
 				<tr valign="top">
 					<th scope="row" class="mailchimp-connect"><?php esc_html_e('Connect to MailChimp', 'mailchimp_i18n'); ?></th>
 					<td>
-                                                <a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), 'http://blog.stacklead.com/index.php' /*home_url('index.php')*/ ) ?>" class="mailchimp-login">Connect</a>
+                                                <a href="<?php echo add_query_arg(array("mcsf_action" => "authorize"), home_url('index.php') ) ?>" class="mailchimp-login">Connect</a>
 					</td>
 				</tr>
 			</table>

@@ -40,7 +40,7 @@ if (!function_exists('home_url')) {
 	function home_url( $path = '', $scheme = null ) {
 		return get_home_url(null, $path, $scheme);
 	}
-	
+
 }
 
 if (!function_exists('get_home_url')) {
@@ -66,7 +66,7 @@ if (!function_exists('get_home_url')) {
 			$scheme = is_ssl() && !is_admin() ? 'https' : 'http';
 
 		if ( empty( $blog_id ) || !is_multisite() )
-			$home = get_option( 'home' );
+			$home = get_option('siteurl'); //get_option( 'home' );
 		else
 			$home = get_blog_option( $blog_id, 'home' );
 
