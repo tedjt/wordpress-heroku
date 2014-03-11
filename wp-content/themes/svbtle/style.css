@@ -20,11 +20,11 @@ body.page article.post{border-top: 0;}
 
 /* http://pea.rs/content/data-table */
 table{margin:0; padding:0}
-table th, 
+table th,
 table td{padding:10px 20px; text-align:left; border-bottom:1px solid #ccc}
 table th{border-width:2px}
 table td{color:#666}
-table tr:last-child th, 
+table tr:last-child th,
 table tr:last-child td{border-bottom:none}
 table tr:nth-child(even){background:#eee}
 
@@ -49,13 +49,13 @@ table tr:nth-child(even){background:#eee}
 #comments{clear:both; }
 
 #comments .navigation{padding:0 0 18px 0}
-h3#comments-title, 
+h3#comments-title,
 h3#reply-title{color:#000; font-size:20px; font-weight:bold; margin-bottom:0}
 h2#comments-title{padding:0 0; margin: 0}
 ol.commentlist{list-style:none; margin:0; padding: 0; max-width: 100%; }
 ol.commentlist li.comment{border-bottom:1px solid #e7e7e7; line-height:24px;  margin:0 0 24px 0; padding:0 0 24px 106px; position:relative}
 ol.commentlist li:last-child{border-bottom:none; margin-bottom:0}
-#comments .comment-body ul, 
+#comments .comment-body ul,
 #comments .comment-body ol{margin-bottom:18px}
 #comments .comment-body p:last-child{margin-bottom:6px}
 #comments .comment-body blockquote p:last-child{margin-bottom:24px}
@@ -65,20 +65,20 @@ ol.commentlist li:last-child{border-bottom:none; margin-bottom:0}
 .comment-author cite{color:#000; font-style:normal; font-weight:bold}
 .comment-author .says{font-style:italic}
 .comment-meta{font-size:12px; margin:0 0 18px 0}
-.comment-meta a:link, 
+.comment-meta a:link,
 .comment-meta a:visited{color:#888; text-decoration:none}
-.comment-meta a:active, 
+.comment-meta a:active,
 .comment-meta a:hover{color:#ff4b33}
 .commentlist .even{}
 .commentlist .bypostauthor{}
 .reply{font-size:12px; padding:0 0 24px 0}
-.reply a, 
+.reply a,
 a.comment-edit-link{color:#888}
-.reply a:hover, 
+.reply a:hover,
 a.comment-edit-link:hover{color:#ff4b33}
 .commentlist .children{list-style:none; margin:0}
 .commentlist .children li{border:none; margin:0}
-.nopassword, 
+.nopassword,
 .nocomments{display:none}
 #comments .pingback{border-bottom:1px solid #e7e7e7; margin-bottom:18px; padding-bottom:18px}
 .commentlist li.comment+li.pingback{margin-top:-6px}
@@ -147,13 +147,13 @@ li.share-end{display: none !important; clear: none !important;}
 @media (max-width: 630px) {
 	/* Responsive Comments */
 	.comments {padding-top: 25px; padding-left: 25px; padding-right: 25px;}
-	#respond .comment-form-author label, #respond .comment-form-email label, 
+	#respond .comment-form-author label, #respond .comment-form-email label,
 	#respond .comment-form-url label, #respond .comment-form-comment label {width: inherit; padding-right: 10px;}
 	#respond .required {margin-left: inherit;}
 	#respond, #respond textarea {width: inherit; max-width: 98%;}
 	ol.commentlist li.comment {padding: inherit;}
 	.comment-author-avatar {visibility: hidden;}
-	
+
 	/* Responsive Images */
 	section#river article p img, section#river article p iframe, section#river article p object { height:auto; }
 }
@@ -162,11 +162,11 @@ li.share-end{display: none !important; clear: none !important;}
 
 #mc_signup {
   margin-top: 20px;
+  width: 70%;
 }
 
 #mc_signup_submit {
   margin-top: 0 !important;
-  width: 300px !important;
   line-height: 14px;
   border: 4px solid #f8f8f8;
   border-radius: 20px;
@@ -174,8 +174,6 @@ li.share-end{display: none !important; clear: none !important;}
   -webkit-border-radius: 20px;
   z-index: 5;
   padding: 7px;
-  padding-left: 15px;
-  padding-right: 15px;
   color: #999;
   font-weight: 600;
   background-color: #fff;
@@ -187,7 +185,7 @@ li.share-end{display: none !important; clear: none !important;}
 }
 
 .mc_signup_submit {
-  text-align: left !important;
+  text-align: center !important;
 }
 
 .mc_input {
